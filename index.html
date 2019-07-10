@@ -18,13 +18,13 @@
 
   <body ng-app="App" ng-controller="HomeCtrl as vm">
 
-    <p>API_KEY : {{vm.api_key}}</p>
-    <p>description : {{vm.description}}</p>
-    <p>speed : {{vm.speed}}</p>
-    <p>name : {{vm.name}}</p>
-    <p>temp : {{vm.temp}}</p>
+    <p>Description : {{vm.description}}</p>
+    <p>Wind Speed : {{vm.windSpeed}} <span ng-show="vm.gotWeather">mph</span> </p>
+    <p>Name : {{vm.name}} </p>
+    <p>Temp: {{vm.tempCelsius}} <span ng-show="vm.gotWeather">&deg;C</span> </p>
+    <p>Temp: {{vm.tempFahrenheit}} <span ng-show="vm.gotWeather">&deg;F</span> </p>
 
-    <button ng-click="vm.getWeather()">Press For Weather</button>
+    <button class="btn-get-weather" ng-click="vm.getWeather()">Press For Weather</button>
 
   </body>
 
